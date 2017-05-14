@@ -9,13 +9,13 @@ package com.app1;
  *
  * @author Denis
  */
-public interface SimpleList {
+public interface SimpleList<T> {
 
-    public void add(Object item);
+    public void add(T item);
 
-    public Object get(int index);
+    public T get(int index);
 
-    public Object set(int index, Object value);
+    public T set(int index, T value);
 
     public int size();
 

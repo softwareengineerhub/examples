@@ -11,7 +11,7 @@ import java.util.Arrays;
  *
  * @author Denis
  */
-public class SimpleArrayList implements SimpleList {
+public class SimpleArrayList <T> implements SimpleList<T> {
     private int capacity = 10;
     private Object[] data;    
     private int n;
@@ -22,7 +22,7 @@ public class SimpleArrayList implements SimpleList {
     
 
     @Override
-    public void add(Object item) {
+    public void add(T item) {
         if(n+1>data.length){
             Object [] tmp = new Object[data.length+capacity];
             System.arraycopy(data, 0, tmp, 0, data.length);
@@ -33,15 +33,15 @@ public class SimpleArrayList implements SimpleList {
     }
 
     @Override
-    public Object get(int index) {
-        return data[index];
+    public T get(int index) {
+        return (T)data[index];
     }
 
     @Override
-    public Object set(int index, Object value) {
+    public T set(int index, Object value) {
         Object oldValue = data[index];
         data[index]=value;
-        return oldValue;
+        return (T)oldValue;
     }
 
     @Override
