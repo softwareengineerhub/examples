@@ -6,6 +6,8 @@
 package com.app1;
 
 import java.util.Arrays;
+import java.util.ConcurrentModificationException;
+import java.util.Iterator;
 
 /**
  *
@@ -15,6 +17,7 @@ public class SimpleArrayList <T> implements SimpleList<T> {
     private int capacity = 10;
     private Object[] data;    
     private int n;
+    private long version;
     
     public SimpleArrayList(){
         data = new Object[capacity];
@@ -30,6 +33,7 @@ public class SimpleArrayList <T> implements SimpleList<T> {
         }
         data[n]=item;
         n++;
+        version++;
     }
 
     @Override
@@ -39,6 +43,7 @@ public class SimpleArrayList <T> implements SimpleList<T> {
 
     @Override
     public T set(int index, Object value) {
+        version++;
         Object oldValue = data[index];
         data[index]=value;
         return (T)oldValue;
@@ -60,7 +65,8 @@ public class SimpleArrayList <T> implements SimpleList<T> {
             data[i]=data[i+1];
         }
         data[n]=null;
-        n--;        
+        n--;      
+        version++;
     }
 
     @Override
@@ -92,6 +98,42 @@ public class SimpleArrayList <T> implements SimpleList<T> {
             return Arrays.equals(data, sal.data);            
         }
         return false;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        
+        return new Iterator<T>(){
+            
+            private int n;
+            private long iteratorVersion=version;
+            private T currentValue;
+            
+            @Override
+            public boolean hasNext() {
+                return n<size();
+            }
+
+            @Override
+            public T next() {            
+                if(iteratorVersion!=version){
+                    throw new ConcurrentModificationException();
+                }
+                T val=get(n);
+                n++;
+                currentValue=val;
+                return val;
+            }
+
+            @Override
+            public void remove() {
+                if(iteratorVersion!=version){
+                    throw new ConcurrentModificationException();
+                }
+                //SimpleArrayList.this.remove(currentValue);
+            }
+            
+        };
     }
     
 }

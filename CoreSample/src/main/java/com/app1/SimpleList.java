@@ -5,11 +5,13 @@
  */
 package com.app1;
 
+import java.util.Iterator;
+
 /**
  *
  * @author Denis
  */
-public interface SimpleList<T> {
+public interface SimpleList<T> extends Iterable<T>{
 
     public void add(T item);
 
