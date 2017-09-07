@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header_link {
+    color: #00abab;
+    font-weight: bold;
+    font-family:Arial;
+    font-size:10pt;
+    text-decoration: underline;
+}
+
+.rules_img{
+   padding-left: 30px;
+   padding-right: 30px
+}
+
+
+.site_text_bold{
+	font-family:Arial;
+	font-weight:bold;
+	font-size:17px;
+}
+
+.site_text{
+	font-family:Arial; 
+	font-weight:bold;
+	font-size:13px;
+}
+
+.catalog_rb_text {
+	font-weight: bold;
+	font-family:Arial; 
+	font-size:9pt;
+	color:black;	
+	text-align:left;
+}
+.catalog_rb_text_sel {
+	font-weight: bold;
+	font-family:Arial; 
+	font-size:9pt;
+	color:#4ac3b9;
+	text-align:left;
+}
+
+.catalog_rb_suitems_text {
+	font-weight: bold;
+	font-family:Arial; 
+	font-size:9pt;
+	color:#79767a;
+}
+
+.catalog_subitems_delim {
+	padding-left: 10px;
+	padding-right:10px;
+}
+
+.profile_header {
+	font-weight: bold;	
+	font-family:Arial; 
+	font-size:15pt;
+	text-decoration: underline;
+	color:black;
+	padding-bottom: 20px;
+}
+
+.profile_text {
+	font-weight: bold;
+	font-family:Arial; 
+	font-size:11pt;
+	color:black;
+}
+
+.add_site_link {
+	font-weight: bold;
+	font-family: Arial; 
+	font-size:14pt;
+	color:#00abab;
+	text-decoration:underline;
+}
+
+.add_site_text	 {
+	font-weight: bold;
+	font-family:Arial; 
+	font-size:13pt;
+	color:#888c8c;	
+}

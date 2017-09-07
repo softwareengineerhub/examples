@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Рейтинг сайтов: главная</title>
+
+
+<!------------------------Needed for rotation-------------------------------------------->
+         <link rel="stylesheet" type="text/css" href="js/autoPlay/imageRound.css">
+             <script type="text/javascript">
+        // <![CDATA[
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        // ]]>
+    </script>
+    <script type="text/javascript">
+        // <![CDATA[
+        try {
+            var pageTracker = _gat._getTracker("UA-12086558-1");
+            pageTracker._trackPageview();
+        } catch(err) {}// ]]>
+    </script>
+    <script type="text/javascript" src="js/autoPlay/jquery.js"></script>
+        <script type="text/javascript" src="js/autoPlay/jquery.roundabout.js"></script>
+        <script type="text/javascript" src="js/autoPlay/jquery.easing.js"></script>
+        <script type="text/javascript">
+            // <[CDATA[
+            /*
+                var descs = {
+                        chair: 'Just chillin&rsquo;, chair-style.',
+                        wise: 'He has the look of a wise, fierce warrior.',
+                        mousepatrol: 'Attention all mice: you&rsquo;ve been warned.',
+                        sleepy: 'Stop taking pictures of me&hellip; trying to sleep here.',
+                        acrocat: 'Introducing: the INCREDIBLE ACROCAT!'
+                };
+
+                $('.item').focus(function() {
+                        var useText = (typeof descs[$(this).attr('id')] != 'undefined') ? descs[$(this).attr('id')] : '';
+                        $('#description').html(useText).fadeIn(200);
+                }).blur(function() {
+                        $('#description').fadeOut(100);
+                });
+             */
+            $(document).ready(function() {
+                var interval;
+
+                $('.holder')
+                .roundabout({
+                    childSelector: '.item',
+
+                })
+                .hover(
+                function() {
+                    // oh no, it's the cops!
+                    clearInterval(interval);
+                },
+                function() {
+                    // false alarm: PARTY!
+                    interval = startAutoPlay();
+                }
+            );
+
+                // let's get this party started
+                interval = startAutoPlay();
+            });
+
+
+            function startAutoPlay() {
+                return setInterval(function() {
+                    $('.holder').roundabout_animateToNextChild();
+                }, 3000);
+            }
+        </script>
+<!------------------------Needed for rotation-------------------------------------------->
+
+
+
+
+    </head>
+    <body style="background-image:url(images/background.png); background-color:#cae2e2; background-repeat:repeat-x;">
+    	<table border=0 align="center" width="100%" height="100%" cellpadding="0" cellspacing="0" style="position:absolute; left:0px; top:0px;"><!--main table-->
+        <tr>
+        <td width="100%" background="images/header_filler.png">
+        	<table width="1024px"  height="44px" align="center" border="0" cellpadding="0" cellspacing="0" >
+            	<tr>
+                <td background="images/header.png" ><!-- header-->
+                	<!--<div style="position:relative; left:310px; top:5px;">-->
+                    <div style="position:relative; top:7px; left:310px; width:450px;">
+                    <a href="index.html" onfocus="this.blur();"><img src="images/btn_main_def.png" border="0" style="position:relative; left:2px;"></a>
+                    <a href="#rusles.html" onfocus="this.blur();"><img src="images/btn_rules_def.png" border="0" style="position:relative; right:10px"></a>
+                    <a href="#conditions.html" onfocus="this.blur();"><img src="images/btn_conditions_def.png" border="0" style="position:relative; right:20px;"></a>
+                    <a href="#faq.html" onfocus="this.blur();"><img src="images/btn_faq_def.png" border="0" style="position:relative; right:30px;"></a>
+                    </div>
+                </td>
+                <td>
+                <a href="#" style="border:hidden;" onfocus="this.blur();"><img src="images/lnk_add_site.png" border="0" style="position:relative; top:15px; left:30px;"></a>
+                </td>
+                <td>
+                <a href="#" style="border:hidden;" onfocus="this.blur();"><img src="images/lnk_authorize.png" border="0" style="position:relative; top:15px; left:0px;"></a>
+                </td>
+                </tr>
+            </table>
+		</td>
+        </tr>
+        <tr>
+        <td width="100%">
+	        <table width="1024px" align="center" border="0" cellpadding="0" cellspacing="0" >
+            	<tr>
+    				<td align="left"><img src="images/logo.png" style="padding-left:30px;"></td>
+    				<td align="left" width="100%">
+                    	<table border="0" cellpadding="0" cellspacing="0" width="550" height="120" style="padding-top:35px; padding-left:10px;">
+                        	<tr>
+                            	<td background="images/search_background.png" style="background-position:11px 42px; background-repeat:no-repeat;">
+                                <div>
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td width="129" align="center" height="57"><a href="./index.html" onfocus="this.blur();"><img src="images/btn_sites_sel.png" border="0" style="position: relative; left: 7px;"></a></td>
+                                            <td width="129" align="center" height="57"><a href="./index1.html" onfocus="this.blur();"><img src="images/btn_stores_def.png" border="0"></a></td>
+                                            <td width="129" align="center" height="57"><a href="./index2.html" onfocus="this.blur();"><img src="images/btn_catalogue_def.png" border="0"></a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <form>
+                                <div>
+                                	<input type="text" style="position:relative; left:35px; width:400px; top:-14px;">
+	                                <img src="images/btn_search.png" style="position:relative; left:35px; top:-7px;">
+                                </div>
+                                <div style="position:relative; top:-13px;">
+                                    <table width="550">
+                                        <tr>
+                                            <td width="50%" align="center">
+                                                <input type="checkbox" onfocus="this.blur();"><img src="images/text_content_search.png">
+                                            </td>
+                                            <td width="50%" align="left">
+                                                <input type="checkbox" onfocus="this.blur();"><img src="images/text_description_search.png">
+                                            </td>
+                                         </tr>
+                                    </table>
+                                </div>
+                                </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        </tr>
+        <tr>
+		<td>
+        <!-- main part -->
+       		<table width="1024px"  align="center" border="0" cellpadding="0" cellspacing="30" >
+            	<tr>
+            		<td align="center">
+	                    <img src="images/text_top20.png">
+                    </td>
+            	</tr>
+                <tr>
+                    <td valign="top" >
+
+
+<!--------------------------------------------------------ROTATION----------------->
+ <div id="contentFlowWrapper" class="holder">
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                    <img title="marsfm5" class="box one" id="pic1" alt="marsfm5" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/x_44494bb9.jpg"
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                    <img title="marsfm5" class="box one" id="pic1" alt="marsfm5" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/x_44494bb9.jpg"  />
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                    <img title="marsfm5" class="box one" id="pic1" alt="marsfm5" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/x_44494bb9.jpg"  />
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                    <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                    <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                    <img title="marsfm3" id="pic3" alt="marsfm3" href="http://www.jacksasylum.eu/ContentFlow/addons.php" class="content" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/x_3c30ba4f.jpg"  />
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm5" class="box one" id="pic1" alt="marsfm5" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/x_44494bb9.jpg"  />
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+           <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+           <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+           <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+           <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://www.flickr.com/photos/tyrnia/1471459076/in/set-72157600123566142/">
+                <img title="marsfm4" class="box two" id="pic2" alt="marsfm4" src="http://marsfm.ru/wp-content/gallery/listalka-na-glavnoj/marsfm4.jpg"  />
+                <!--div class="caption">Mars FM vol. 4<br /><a href="http://marsfm.ru/marsfm4">подробнее</a> | <a href="http://marsfm.ru/download/4">скачать</a> </div-->
+                </a>
+            </div>
+
+
+        </div>
+
+
+       
+
+        
+
+       
+    
+    
+
+
+                            
+<!-----------------------------------------------------------ROTATION---------------->
+
+
+
+                    </td>
+                </tr>
+                <tr>
+                	<td align="center">
+        	        	<img src="images/horizontal_delimeter_line.png" />
+                    </td>
+                </tr>
+            </table>
+        <!-- footer -->
+       	</td>
+        </tr>
+        <tr>
+        	<td height="100%">
+            </td>
+        </tr>
+        <tr>
+        <td width="100%" background="images/footer_filler.png">
+        	<table width="1024px"  height="44px" align="center" border="0" cellpadding="0" cellspacing="0" >
+            	<tr>
+                <td background="images/footer.png" align="center"></td>
+                </tr>
+            </table>
+		</td>
+        </tr>
+        </table>
+    </body>
+</html>

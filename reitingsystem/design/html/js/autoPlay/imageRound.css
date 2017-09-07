@@ -1,0 +1,35 @@
+html, body {
+                padding: 0;
+                margin: 0;
+                font: normal normal normal 1em/1.5 Georgia, serif;
+                color: #333;
+            }
+
+            h1 { text-align: center; font-weight: normal; font-style: italic; }
+            a img { border: none; }
+
+            .roundabout-holder {
+                list-style: none;
+                width: 35em;
+                height: 15em;
+                margin: 3em auto;
+            }
+
+            .roundabout-moveable-item {
+                height: 2em;
+                width: 2em;
+                cursor: pointer;
+            }
+
+            .roundabout-moveable-item img {
+                width: 100%;
+            }
+
+            .roundabout-in-focus {
+                cursor: auto;
+            }
+
+            #filler {
+                text-align: center;
+                height: 1em;
+            }

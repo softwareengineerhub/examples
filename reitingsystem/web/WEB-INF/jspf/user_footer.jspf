@@ -1,0 +1,22 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+        <!-- footer -->
+       	</td>
+        </tr>
+        <tr>
+        	<td height="100%">
+            </td>
+        </tr>
+        <tr>
+        <td width="100%" background="../images/footer_filler.png">
+        	<table width="1024"  height="44" align="center" border="0" cellpadding="0" cellspacing="0" >
+            	<tr>
+                <td background="../images/footer.png" align="center" width="1024"></td>
+                </tr>
+            </table>
+		</td>
+        </tr>
+        </table>
+    </body>
+</html>
+

@@ -1,0 +1,175 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header_link {
+    color: #00abab;
+    font-weight: bold;
+    font-family:Arial;
+    font-size:10pt;
+    text-decoration: underline;
+}
+
+.rules_img{
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+
+.site_text_bold{
+    font-family:Arial;
+    font-weight:bold;
+    font-size:17px;
+}
+
+.site_text{
+    font-family:Arial; 
+    font-weight:bold;
+    font-size:13px;
+}
+
+.catalog_rb_text {
+    text-decoration: none;
+    font-weight: bold;
+    font-family:Arial; 
+    font-size:9pt;
+    color:black;	
+    text-align:left;
+}
+.catalog_rb_text_sel {        
+    font-weight: bold;
+    font-family:Arial; 
+    font-size:9pt;
+    color:#4ac3b9;
+    text-align:left;
+}
+
+.catalog_rb_suitems_text {
+    text-decoration: none;
+    font-weight: bold;
+    font-family:Arial; 
+    font-size:9pt;
+    color:#79767a;
+}
+
+.catalog_rb_suitems_text_sel {
+    text-decoration: underline;
+    font-weight: bold;
+    font-family:Arial;
+    font-size:9pt;
+    color:#79767a;
+}
+
+.catalog_subitems_delim {
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+.profile_header {
+    font-weight: bold;	
+    font-family:Arial; 
+    font-size:15pt;
+    text-decoration: underline;
+    color:black;
+    padding-bottom: 20px;
+}
+
+.profile_text {
+    font-weight: bold;
+    font-family:Arial; 
+    font-size:11pt;
+    color:black;
+}
+
+.add_site_link {
+    font-weight: bold;
+    font-family: Arial; 
+    font-size:14pt;
+    color:#00abab;
+    text-decoration:underline;
+}
+
+.add_site_text	 {
+    font-weight: bold;
+    font-family:Arial; 
+    font-size:13pt;
+    color:#888c8c;	
+}
+
+.add_site_header {
+    font-weight: bold;	
+    font-family:Arial;
+    font-size:13pt;
+    text-decoration: underline;
+    color:black;
+    padding-bottom: 10px;
+}
+
+.required_symbol {
+    font-family: Arial;
+    font-size:10pt;
+    color:red;
+}
+
+.required_text {
+    font-weight: bold;
+    font-family: Arial;
+    font-size:9pt;
+    color:red;
+}
+
+.vote_link_text {
+    font-weight:bold;    
+    line-height:85%;
+    padding-bottom:2px;
+    font-family:Arial; 
+    font-size:9pt;
+    color:black;	
+    text-align:left;
+}
+
+.vote_link_counter {
+    text-decoration: none;
+    font-weight:bold;
+    color:black;	
+    text-align:left;
+}
+
+.logon_user {
+    font-size: 9pt;
+    font-weight: bold;
+    font-family:Arial;
+    color:#00abab;
+}
+
+.deleted_site_msg {
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+    color: red;
+}
+
+.faq_question {
+    text-align: left;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+    color: #009199;
+}
+
+.faq_answer {    
+    font-weight: bold;
+    font-style: italic;
+    font-family: Arial;
+    font-size: 9pt;
+    color: black;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.faq_number {
+    text-align: left;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+    color: #009199;
+}

@@ -1,0 +1,209 @@
+<%-- any content can be specified here e.g.: --%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page pageEncoding="UTF-8" %>
+<%@ page import="com.conarhco.rating.Catalog;"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Рейтинг сайтов: <c:out value="${title}"/></title>
+        <link href="images/style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+       
+        <style>
+            #auth_form{
+                width: 240px;
+                height: 240px;             
+                position: fixed;
+                top: 10%;
+                right: 10%;
+                z-index: 7;
+            }
+
+             #auth_img{
+                width: 240px;
+                height: 240px;
+                background-position: inherit;
+                position: fixed;
+                top: 10%;
+                right: 10%;
+                z-index: 6;
+            }
+
+            #mouse_ind{
+                position:relative;
+                top: -35px;
+                left: -5px;
+            }
+        </style>
+    </head>
+    <body style="background-image:url(images/background.png); background-color:#cae2e2; background-repeat:repeat-x;">
+        <img src="images/auth_form_background.png" id="auth_img" />
+        <table border="0" align="center" width="100%" height="100%" cellpadding="0" cellspacing="0" style="position:absolute; left:0px; top:0px;"><!--main table-->
+            <tr>
+                <!-- форма авторизации -->
+               
+                <div id="auth_form">
+                    
+                    <form action="authServlet" method="POST" >
+                        <center>
+                            <p>
+                                Вход
+                            </p>
+                            <p><div>
+                                <input id="form_login_field" type="text" value="логин" style="text-align: center;color:#C0C0C0"/>
+                                <input id="form_login_field_value" type="text" value="" name="login" style="text-align: center;color:black"/>
+                                </div>
+                            </p>
+                            <p>
+                                <div>
+                                    <input id="password-clear" type="text" value="пароль" autocomplete="off" style="text-align: center;color:#C0C0C0"/>
+                                    <input id="password-password" type="password" name="password" value="" autocomplete="off" style="text-align: center;color:black"/>
+                                </div>
+                            </p>
+                            <input type="submit" value="Войти"/>
+                            <input type="button" value="Отмена" id="cancel"/>
+                           
+                            <p>
+                                <a href="registration.jsp">Вспомнить пароль</a>
+                            </p>
+                        </center>
+                    </form>
+                </div>
+
+                <!-- конец формы авторизации -->
+
+                <c:set var="path" value="${pageContext.request.servletPath}"/>
+                <td width="100%" background="images/header_filler.png">
+                    <table width="1024"  height="44" align="center" border="0" cellpadding="0" cellspacing="0" style="z-index: 0" >
+                        <tr>
+                            <c:set var="logon" value="${not empty sessionScope.user}"/>
+                            <c:if test="${logon}">
+                                <td valign="bottom" align="center" width="180">
+                                    <font class="logon_user">Пользователь:&nbsp; <c:out value="${sessionScope.user}"/></font>
+                                </td>
+                            </c:if>
+                            <td <c:choose>
+                                    <c:when test="${logon}">
+                                        background="images/header1.png"
+                                    </c:when>
+                                    <c:otherwise>
+                                        background="images/header.png"
+                                    </c:otherwise>
+                                </c:choose>
+                                >
+                                <!-- header-->
+                                <!--<div style="position:relative; left:310px; top:5px;">-->
+                                <div id="menu_img" 
+                                     <c:choose>
+                                         <c:when test="${logon}">
+                                             style="position:relative; top:7px; left:130px; width:450px;"
+                                         </c:when>
+                                         <c:otherwise>
+                                             style="position:relative; top:7px; left:310px; width:450px;"
+                                         </c:otherwise>                                         
+                                     </c:choose>
+                                     >
+                                    <a  href="index.jsp" onfocus="this.blur();"><img id="main" src="<c:choose><c:when test="${path == '/index.jsp' || path == '/stores.jsp' || path == '/catalog.jsp'}">images/btn_main_sel.png</c:when><c:otherwise>images/btn_main_def.png</c:otherwise></c:choose>" border="0" style="position:relative; left:2px;"></a>
+                                    <a  href="rules.jsp" onfocus="this.blur();"><img id="rules" src="<c:choose><c:when test="${path == '/rules.jsp'}">images/btn_rules_sel.png</c:when><c:otherwise>images/btn_rules_def.png</c:otherwise></c:choose>" border="0" style="position:relative; right:10px"></a>
+                                    <a  href="conditions.jsp" onfocus="this.blur();"><img id="conditions" src="<c:choose><c:when test="${path == '/conditions.jsp'}">images/btn_conditions_sel.png</c:when><c:otherwise>images/btn_conditions_def.png</c:otherwise></c:choose>" border="0" style="position:relative; right:20px;"></a>
+                                    <a  href="faq.jsp" onfocus="this.blur();"><img id="faq" src="<c:choose><c:when test="${path == '/faq.jsp'}">images/btn_faq_sel.png</c:when><c:otherwise>images/btn_faq_def.png</c:otherwise></c:choose>" border="0" style="position:relative; right:30px;"></a>
+                                    <div id="mouse_ind"><img src="images/menu_mouse_ind.png"></div>
+                                </div>
+                                <script type="text/javascript" src="js/menu_images_blur.js"></script>
+                            </td>
+
+                            <!--  регистрация, авторизация / личный кабинет, выход -->
+                            <%--<c:set var="user" value="${sessionScope.user}"/>--%>
+                            <%--<c:set var="user" value="Denis" scope="session" />--%>
+                            <c:choose>
+                                <c:when test="${empty user}">
+                                    <td align="center" valign="bottom" nowrap>
+                                        <a href="registration.jsp" class="header_link" onfocus="this.blur();">
+                                            Регистрация
+                                        </a>
+                                    </td>
+                                    <td align="center" valign="bottom" nowrap>
+                                        <div id="simple_dialog"><a href="#" class="header_link" onfocus="this.blur();" >
+                                                Авторизация
+                                            </a></div>
+                                            <%--User: <c:out value="${user}"/>--%>
+                                    </td>
+
+
+                                </c:when>
+                                <c:otherwise>
+                                    <td align="center" valign="bottom" nowrap>
+                                        <a href="user/profile.jsp" class="header_link" onfocus="this.blur();">
+                                            Личный кабинет
+                                        </a>
+                                    </td>
+
+                                    <td align="center" valign="bottom" nowrap>
+                                        <a href="exit" class="header_link" onfocus="this.blur();">
+                                            Выход
+                                        </a>
+
+                                    </td>
+
+                                </c:otherwise>
+                            </c:choose>
+                            <!-- -->
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <table width="1024" align="center" border="0" cellpadding="0" cellspacing="0" >
+                        <tr>
+                            <td align="left"><img src="images/logo.png" style="padding-left:30px;"></td>
+                            <form name="search" method="post" action="search">
+                                <td align="left" width="100%">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="550" height="120" style="padding-top:35px; padding-left:10px;">
+                                        <tr>
+                                            <td background="images/search_background.png" style="background-position:11px 42px; background-repeat:no-repeat;">
+                                                <input type="hidden" name="type" value="<c:choose><c:when test="${path == '/index.jsp' || path == '/rules.jsp' || path == '/conditions.jsp' || path == '/faq.jsp'}">1</c:when><c:otherwise><c:out value="${param.type}"/></c:otherwise></c:choose>"/>                                                
+                                                <div>
+                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td width="129" align="center" height="57"><a href="./catalog.jsp?type=<%=Catalog.CatalogType.CATALOG_SITES.getType()%>" onfocus="this.blur();"><img src="<c:choose><c:when test="${path == '/index.jsp' || path == '/rules.jsp' || path == '/conditions.jsp' || path == '/faq.jsp' || param.type == 1}">images/btn_sites_sel.png</c:when><c:otherwise>images/btn_sites_def.png</c:otherwise></c:choose>" border="0" style="position: relative; left: 7px;"></a></td>
+                                                            <td width="129" align="center" height="57"><a href="./catalog.jsp?type=<%=Catalog.CatalogType.CATALOG_STORES.getType()%>" onfocus="this.blur();"><img src="<c:choose><c:when test="${param.type == 2}">images/btn_stores_sel.png</c:when><c:otherwise>images/btn_stores_def.png</c:otherwise></c:choose>" border="0"></a></td>
+                                                            <td width="129" align="center" height="57"><a href="./catalog.jsp?type=<%=Catalog.CatalogType.CATALOG_ALL.getType()%>" onfocus="this.blur();"><img src="<c:choose><c:when test="${param.type == 99}">images/btn_catalogue_sel.png</c:when><c:otherwise>images/btn_catalogue_def.png</c:otherwise></c:choose>" border="0"></a></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div>
+                                                    <c:if test="${not empty sessionScope.searchResultBean}">
+                                                        <c:set var="searchResultBean" value="${sessionScope.searchResultBean}"/>
+                                                    </c:if>                                                    
+                                                    <input id="search_text" name="searchText" type="text" style="position:relative; left:35px; width:400px; top:-14px;" <c:if test="${not empty searchResultBean}">value="<c:out value="${searchResultBean.searchText}"/>"</c:if>/>
+                                                        <a href="#" onfocus="this.blur();" onclick="javascript: document.search.submit();"><img src="images/btn_search.png" style="position:relative; left:35px; top:-7px;" border="0"></a>
+                                                </div>
+                                                <div style="position:relative; top:-13px;">
+                                                    <table width="550">
+                                                        <tr>
+                                                            <td width="50%" align="center">                                                                
+                                                                <input name="contentSearch" type="checkbox" onfocus="this.blur();" <c:if test="${not empty searchResultBean && searchResultBean.contentSearch}">checked</c:if>/><img src="images/text_content_search.png"/>
+                                                                        </td>
+                                                                        <td width="50%" align="left">
+                                                                            <input name="descSearch" type="checkbox" onfocus="this.blur();" <c:if test="${not empty searchResultBean && searchResultBean.descSearch}">checked</c:if>/><img src="images/text_description_search.png"/>
+                                                                                    </td>
+                                                                                    </tr>
+                                                                                    </table>
+                                                                                    </div>
+
+                                                                                    </td>
+                                                                                    </tr>
+                                                                                    </table>
+                                                                                    </td>
+                                                                                    </form>
+                                                                                    </tr>
+                                                                                    </table>
+                                                                                    </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="100%" valign="top">
