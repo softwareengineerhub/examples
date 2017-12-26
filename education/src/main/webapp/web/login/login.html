@@ -475,11 +475,9 @@ input[type="submit"]:hover {
 	<h1>LOGIN</h1>
 	<h2>Log in to your Account</h2>
 	<div class="w3layoutscontaineragileits">
-		<form method="post" action="j_security_check">
-			<!--<input type="text" Name="Userame" placeholder="EMAIL" required="">-->
-                        <input type="text"  name= "j_username"  placeholder="EMAIL" required="">              
-			<!--<input type="password" Name="Password" placeholder="PASSWORD" required="">-->
-                        <input type="password"  name= "j_password" placeholder="PASSWORD" required="" >
+		<form method="get" action="../user/user-page.xhtml">
+                        <input type="text"  name= "NAME"  placeholder="EMAIL" required="">              
+                        <input type="password"  name= "PASSWORD" placeholder="PASSWORD" required="" >
 			<ul class="agileinfotickwthree">
 				<li>
 					<input type="checkbox" id="brand1" value="">
@@ -488,7 +486,7 @@ input[type="submit"]:hover {
 			</ul>
 			<div class="aitssendbuttonw3ls">
 				<input type="submit" value="LOGIN">
-				<p><a href="../registration.html">REGISTER NEW ACCOUNT <span>→</span></a></p>
+				<p><a href="registration.html">REGISTER NEW ACCOUNT <span>→</span></a></p>
 				<div class="clear"></div>
 			</div>
 		</form>
