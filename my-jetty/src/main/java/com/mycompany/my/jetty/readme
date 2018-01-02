@@ -1,0 +1,6 @@
+https://wiki.eclipse.org/Jetty/Feature/Servlets_Bundled_with_Jetty
+
+The DefaultServlet implements the ResourceFactory interface and extends the HttpServlet abstract class.
+It is usually mapped to / and provides handling for static content, 
+OPTION and TRACE methods for the context. The MOVE method is allowed if PUT and DELETE are allowed. 
+See DefaultServlet javadoc.
