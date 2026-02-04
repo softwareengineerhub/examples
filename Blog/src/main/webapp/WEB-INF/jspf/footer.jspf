@@ -1,0 +1,18 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<tr>
+    <td style="font-size: medium; padding-top: 20px; padding-bottom: 20px;" align="left"><a class="np" href="#"><< prev</a></td>
+    <td style="font-size: medium; padding-top: 20px; padding-bottom: 20px;" align="center">PAGE <a class="np" href="#">1</a></td>
+    <td style="font-size: medium; padding-top: 20px; padding-bottom: 20px;" align="right"><a class="np" href="#">next >></a></td>
+</tr>
+<tr>
+    <td colspan="3" style="font: small; color: #004cca" align="center"><hr style="color: #646464"><br>All rights reserved (c) 2010</td>
+</tr>
+<tr>
+    <td colspan="3" style="font: small; padding-bottom: 20px; color: #004cca" align="center">:)</td>
+</tr>
+
+</table>
+</center>
+</body>
+</html>

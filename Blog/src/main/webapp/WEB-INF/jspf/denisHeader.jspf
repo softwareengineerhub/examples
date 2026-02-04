@@ -1,0 +1,32 @@
+<%@ page pageEncoding="UTF-8" %>
+<%-- <%@page import="com.gwain.blog.UserClass" %> --%>
+<%-- <%UserClass user = (UserClass)request.getSession().getAttribute("user");%> --%>
+<% String user = request.getRemoteUser(); %>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>IT'S SOOOOO COOLBLOG !</title>
+    <link rel="stylesheet" type="text/css" href="images/style.css" />
+</head>
+<body>
+<center>
+    <table id="tHead">
+        <%--<tr>
+           <td style="height: 20px" colspan="3" align="right"><%=(user==null)?"":user%></td>
+        </tr>--%>
+
+        <tr>
+            <td style=""><input type="image"
+                                src="images/logo.png"
+                                onclick="location.href='/Blog/';"/></td>
+            <td style=""><input type="image"
+                                src="images/but_new.png"
+                                onmouseover="src='images/but_new_in.png'"
+                                onmouseout="src='images/but_new.png'"
+                                onclick="location.href='<%=(user==null)?"/Blog/login.jsp":"/Blog/new.jsp"%>'"/></td>
+            <td style=""><input type="image"
+                                src="<%=(user==null)?"images/but_login.png":"images/but_logout.png"%>"
+                                onmouseover="src='<%=(user==null)?"images/but_login_in.png":"images/but_logout_in.png"%>'"
+                                onmouseout="src='<%=(user==null)?"images/but_login.png":"images/but_logout.png"%>'"
+                                onclick="location.href='<%=(user==null)?"/Blog/login.jsp":"/Blog/doLogout"%>'"/></td>
+        </tr>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/Blog">
+    <!--<Realm className="org.apache.catalina.realm.JDBCRealm"
+           connectionName="root"
+           connectionPassword="11111111"
+           connectionURL="jdbc:mysql://localhost/blog"
+           driverName="com.mysql.jdbc.Driver"
+           roleNameCol="role_name"
+           userCredCol="user_pass"
+           userNameCol="user_name"
+           userRoleTable="user_roles"
+           userTable="user"/> -->
+
+    <Resource
+            name="myDS2"
+            auth="Container"
+            type="javax.sql.DataSource"
+            maxActive="100"
+            maxIdle="30"
+            maxWait="10000"
+            driverClassName = "com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/blog?useSSL=false"
+            username="root"
+            password="11111111"
+            />
+
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
+           dataSourceName="myDS2"
+           localDataSource="true"
+           roleNameCol="role_name"
+           userCredCol="user_pass"
+           userNameCol="user_name"
+           userRoleTable="user"
+           userTable="user"/>
+
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
+           dataSourceName="myDS2"
+           localDataSource="true"
+           userTable="user"
+           userNameCol="user_name"
+           userCredCol="user_pass"
+           userRoleTable="user"
+           roleNameCol="role_name"
+
+    />
+</Context>

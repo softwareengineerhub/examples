@@ -1,0 +1,17 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+Hello, <%=request.getRemoteUser()%>!!!<br>
+        <table width="100%" border="1" align="center" cellpadding="10">
+            <tr></tr>
+            <tr><td width="25%">
+                    <form action="search.jsp" method="get">
+                       <input type="text" size="=40" name="search">
+                        <input type="submit" value="search">
+                    </form>
+                        <a href="all.jsp">All publications of <%=request.getRemoteUser()%>: <%=DataModel.instance().getNewsByAuthor(request.getRemoteUser()).size()%></a><br><p>
+                            <a href="addNews.jsp">Add news</a><BR><p>
+                        <a href="GraphicServlet">Statistics</a>
+                </td>
