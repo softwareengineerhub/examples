@@ -22,6 +22,7 @@ public class Main1 {
         ObjectName key = new ObjectName("mdomain:key=value");
         Trader trador = new Trader();
         server.registerMBean(trador, key);
+
         
         //Remote reflection
         Object limitValue=server.getAttribute(key, "Limit");
@@ -45,6 +46,8 @@ public class Main1 {
             statusValue=server.getAttribute(key, "Status");
             System.out.println(String.format("Status=%s", statusValue));
         }
+
+        Thread.sleep(Long.MAX_VALUE);
     }
     
 }
